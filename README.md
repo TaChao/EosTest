@@ -30,8 +30,12 @@
 6. 创建gamecoin账户：cleos create account eosio gamecoin EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF
 7. cleos set contract awcoin currency 向awcoin 账户导入合约
 8. cleos set contract gamecoin currency 向gamecoin 账户导入合约
-9. 创建两个 player账户 或其他自己喜欢的账户
-10. clone 项目 go build 后运行编译好的二进制文件
+9. cleos push action awcoin create '{"issuer":"awcoin","maximum_supply":"1000000.0000 CUR","can_freeze":"0","can_recall":"0","can_whitelist":"0"}' --permission awcoin@active
+10. cleos push action gamecoin create '{"issuer":"gamecoin","maximum_supply":"1000000.0000 CUR","can_freeze":"0","can_recall":"0","can_whitelist":"0"}' --permission gamecoin@active
+11. 创建两个 player账户 或其他自己喜欢的账户
+cleos create account eosio player1 EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF
+cleos create account eosio player2 EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF EOS4vfrp1WfL4UEmpGJn4JxfVjAXKrH5sPK5VG8efVU9eCcUYVEbF
+12. clone 项目 go build 后运行编译好的二进制文件
 
 运行二进制文件 默认8080端口即可看到页面
 
